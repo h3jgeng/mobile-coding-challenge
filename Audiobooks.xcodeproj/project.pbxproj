@@ -49,6 +49,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A79040F29F9DB36003345BC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6AA618B829F8F4CF00800899 /* ViewController.swift */,
+				6A79040D29F9A638003345BC /* DetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6A79041129F9DB5B003345BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A6CC09529F9080E00F5C443 /* Podcast.swift */,
+				6A6CC09B29F91E2A00F5C443 /* URLResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A79041329F9DB7D003345BC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6A6CC09929F918F300F5C443 /* WebService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6A79041429F9DB8D003345BC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6A6CC09D29F92D0100F5C443 /* HelperMethods.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6A79041529F9DB9C003345BC /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				6AA618C929F8FCFA00800899 /* AudioBookCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
 		6AA618A829F8F4CF00800899 = {
 			isa = PBXGroup;
 			children = (
@@ -68,15 +110,13 @@
 		6AA618B329F8F4CF00800899 /* Audiobooks */ = {
 			isa = PBXGroup;
 			children = (
+				6A79041529F9DB9C003345BC /* TableCells */,
+				6A79041429F9DB8D003345BC /* Helper */,
+				6A79041329F9DB7D003345BC /* API */,
+				6A79041129F9DB5B003345BC /* Model */,
+				6A79040F29F9DB36003345BC /* ViewControllers */,
 				6AA618B429F8F4CF00800899 /* AppDelegate.swift */,
 				6AA618B629F8F4CF00800899 /* SceneDelegate.swift */,
-				6AA618B829F8F4CF00800899 /* ViewController.swift */,
-				6A79040D29F9A638003345BC /* DetailsViewController.swift */,
-				6A6CC09929F918F300F5C443 /* WebService.swift */,
-				6AA618C929F8FCFA00800899 /* AudioBookCell.swift */,
-				6A6CC09529F9080E00F5C443 /* Podcast.swift */,
-				6A6CC09B29F91E2A00F5C443 /* URLResponse.swift */,
-				6A6CC09D29F92D0100F5C443 /* HelperMethods.swift */,
 				6AA618BA29F8F4CF00800899 /* Main.storyboard */,
 				6AA618BD29F8F4D300800899 /* Assets.xcassets */,
 				6AA618BF29F8F4D300800899 /* LaunchScreen.storyboard */,
