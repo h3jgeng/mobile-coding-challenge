@@ -16,13 +16,10 @@ class AudioBookCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setupCell(podcast: Podcast?) {
@@ -30,6 +27,7 @@ class AudioBookCell: UITableViewCell {
         podcastAuthor.text = podcast?.publisher
         podcastAuthor.font = UIFont.italicSystemFont(ofSize: 13)
         favouriteTag.text = podcast?.isFavourited ?? false ? "Favourited" : ""
+        // use imageData directly otherwise call helper functions
         if let imageData = podcast?.imageData {
             self.podcastImage.image = UIImage(data: imageData)
         }else{

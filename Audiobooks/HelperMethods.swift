@@ -7,6 +7,7 @@
 
 import UIKit
     
+// helper function to convert url to image and save image data to podcast object
 func convertURLtoImageAndSaveData(urlString: String, podcast: Podcast, completionHandler: @escaping (UIImage) -> ()) {
     guard let url = URL(string: urlString) else { return }
     DispatchQueue.global().async {

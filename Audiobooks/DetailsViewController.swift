@@ -22,6 +22,7 @@ class DetailsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // set back btn
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
@@ -30,14 +31,14 @@ class DetailsViewController: UIViewController {
     
     
     @IBAction func favouriteBtnPressed(_ sender: Any) {
+        // button logic
         if currentPodcast?.isFavourited ?? false {
-            currentPodcast?.isFavourited = false
             favouriteBtn.titleLabel?.text = "Favourite"
             favouriteBtn.setTitle("Favourite", for: .normal)
         }else{
-            currentPodcast?.isFavourited = true
             favouriteBtn.setTitle("Favourited", for: .normal)
         }
+        currentPodcast?.isFavourited = !(currentPodcast?.isFavourited ?? false)
     }
 }
 

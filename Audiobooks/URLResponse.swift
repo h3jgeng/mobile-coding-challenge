@@ -14,6 +14,7 @@ struct URLResponse: Decodable {
         case podcasts
     }
     
+    // we only need to focus on podcasts
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         if container.contains(.podcasts) {

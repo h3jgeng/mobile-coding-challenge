@@ -16,10 +16,12 @@ class ViewController: UIViewController {
         setupData()
     }
     
+    // refresh page
     override func viewWillAppear(_ animated: Bool) {
         bookListTableView.reloadData()
     }
     
+    // setup data and UI
     func setupData() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Podcasts"
@@ -34,7 +36,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // create cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "audioBookCell") as! AudioBookCell
+        // setup Cell
         cell.setupCell(podcast: podcastItems?[indexPath.row])
         return cell
     }
@@ -52,12 +56,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+/// functions related to web call
 extension ViewController {
     func fetchData() {
         WebService.shared.callGetResquest(urlString: "https://listen-api-test.listennotes.com/api/v2/best_podcasts?genre_id=93&page=4&region=us&sort=listen_score&safe_mode=0") { isSuccess, podcasts in
             
+            // check if success
             if isSuccess {
                 DispatchQueue.main.async { [self] in
+                    // assign items and refresh table
                     podcastItems = podcasts
                     bookListTableView.reloadData()
                 }
